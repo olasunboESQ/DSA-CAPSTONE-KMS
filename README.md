@@ -32,18 +32,41 @@ I will use Structured Query Language to explore this Order Data in order to solv
     1. Which product category had the highest sales?
  
        ```sql
-     
-       SELECT TOP 1
-      PRODUCT_CATEGORY, 
-      SUM (SALES) AS TOTAL_SALES
-      FROM [dbo].[KMS Sql Case Study]
-      GROUP BY PRODUCT_CATEGORY
-      ORDER BY TOTAL_SALES ASC
+SELECT TOP 1 PRODUCT_CATEGORY, 
+SUM (SALES) AS TOTAL_SALES
+FROM [dbo].[KMS Sql Case Study]
+GROUP BY PRODUCT_CATEGORY
+ORDER BY TOTAL_SALES ASC
 
-   
-    3. What are the Top 3 and Bottom 3 regions in terms of sales?
+```
+       
+    2. What are the Top 3 and Bottom 3 regions in terms of sales?
 
-    4. What were the total sales of appliances in Ontario?
+```sql
+
+SELECT TOP 3
+REGION, SUM (SALES) AS
+TOTAL_SALES FROM [dbo].[KMS Sql Case Study]
+GROUP BY REGION 
+ORDER BY TOTAL_SALES ASC
+
+SELECT TOP 3
+REGION, SUM (SALES) AS
+TOTAL_SALES FROM [dbo].[KMS Sql Case Study]
+GROUP BY REGION 
+ORDER BY TOTAL_SALES DESC
+
+```
+
+    3. What were the total sales of appliances in Ontario?
+
+ ```sql
+SELECT SUM (SALES) AS TOTAL_APPLIANCE_SALES
+FROM[dbo].[KMS Sql Case Study]
+WHERE Product_SUB_Category = 'APPLIANCES'
+AND Region = 'ONTARIO'
+
+```
 
     5. Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
 
