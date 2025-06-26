@@ -20,6 +20,7 @@ Excel Dataset containing the order data from the year 2009-2012 was to criticall
 
 This is an Order Data from year 2009-2012, I am tasked with analyzing the Order Inventory of the store for 4 years.
 I will use Structured Query Language to explore this Order Data in order to solve two (2) case scenarios.
+The first critical step is to create a database unto which i imported the Order data of the store. 
 
 
 ## Analysis Tools
@@ -27,11 +28,13 @@ I will use Structured Query Language to explore this Order Data in order to solv
 - Microsoft Excel [Download Here](https://www.microsoft.com)
 - Structured Query Language
 
-- Case Scenario One
+### Case Scenario One
+
+I created a database called DSA_Project and i imported the excel order data into it as a table
 
     1. Which product category had the highest sales?
- 
-       ```sql
+
+ ```sql
 SELECT TOP 1 PRODUCT_CATEGORY, 
 SUM (SALES) AS TOTAL_SALES
 FROM [dbo].[KMS Sql Case Study]
@@ -43,7 +46,6 @@ ORDER BY TOTAL_SALES ASC
     2. What are the Top 3 and Bottom 3 regions in terms of sales?
 
 ```sql
-
 SELECT TOP 3
 REGION, SUM (SALES) AS
 TOTAL_SALES FROM [dbo].[KMS Sql Case Study]
@@ -68,9 +70,28 @@ AND Region = 'ONTARIO'
 
 ```
 
-    5. Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
+    4. Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
 
-    6. KMS incurred the most shipping cost using which shipping method?
+ ```sql
+bottom 10 customers
+select top 10 customer_name,
+sum (sales)as total_sales
+from[dbo].[KMS Sql Case Study]
+group by Customer_Name 
+order by total_sales asc
+
+```
+
+    5. KMS incurred the most shipping cost using which shipping method?
+
+```sql
+select top 1
+Ship_Mode,
+shipping_cost
+from[dbo].[KMS Sql Case Study]
+order by Shipping_Cost
+
+```
 
   
 
