@@ -9,25 +9,45 @@ Excel Dataset containing the order data from the year 2009-2012 was to criticall
 
 - [Analysis Tools](#analysis-tools)
 
-- [OUTCOME OF Order Data USING MICROSOFT EXCEL](#outcome-of-order-data-project-using-microsoft-excel)
+- [OUTCOME OF Order Data USING MICROSOFT EXCEL](#outcome-of-order-data-using-microsoft-excel)
 
-- [Structured Query Language (SQL)](#structured-query-language-sql)
-
-- [Microsoft Power BI](#microsoft-power-bi)
+- [OUTCOME OF ORDER_DATA USING Structured Query Language (SQL)](#outcome-of-order-data-using-structured-query-language-sql)
 
 - [FINDINGS AND RECOMMENDATIONS](#findings-and-recommendations)
 
 
 ## Project Overiew
 
-This is an Order Data , I am tasked  with analyzing the sales performance of a retail store.
-You will need to explore sales data to uncover key insights such as top-selling products, regional
-performance, and monthly sales trends. The goal is to produce an interactive Power BI
-dashboard that highlights these findings
+This is an Order Data from year 2009-2012, I am tasked with analyzing the Order Inventory of the store for 4 years.
+I will use Structured Query Language to explore this Order Data in order to solve two (2) case scenarios.
 
 
 ## Analysis Tools
 
-i. Microsoft Excel [Download Here](https://www.microsoft.com)
-ii. Structured Query Language
-iii. Microsoft PowerBI
+- Microsoft Excel [Download Here](https://www.microsoft.com)
+- Structured Query Language
+
+- Case Scenario One
+
+    1. Which product category had the highest sales?
+ 
+       ```sql
+     
+       SELECT TOP 1
+      PRODUCT_CATEGORY, 
+      SUM (SALES) AS TOTAL_SALES
+      FROM [dbo].[KMS Sql Case Study]
+      GROUP BY PRODUCT_CATEGORY
+      ORDER BY TOTAL_SALES ASC
+
+   
+    3. What are the Top 3 and Bottom 3 regions in terms of sales?
+
+    4. What were the total sales of appliances in Ontario?
+
+    5. Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
+
+    6. KMS incurred the most shipping cost using which shipping method?
+
+  
+
