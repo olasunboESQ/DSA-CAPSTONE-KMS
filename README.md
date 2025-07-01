@@ -42,7 +42,9 @@ GROUP BY PRODUCT_CATEGORY
 ORDER BY TOTAL_SALES ASC
 
 ```
-       
+
+- Office Spplies has the highest sales with total sales of 3,752,740
+         
     2. What are the Top 3 and Bottom 3 regions in terms of sales?
 
 ```sql
@@ -59,7 +61,23 @@ GROUP BY REGION
 ORDER BY TOTAL_SALES DESC
 
 ```
+- TOP 3 REGIONS
 
+      i. West with 3,597,550
+
+      ii. Ontario with 3,063,221
+
+      iii. Prarie with 2,837,301
+
+- BOTTOM 3 REGIONS
+
+       i. Nunavut with 116,374
+
+      ii. NorthWest Territories with 800,850
+
+      iii. Yukon with 975,865
+
+   
     3. What were the total sales of appliances in Ontario?
 
  ```sql
@@ -69,6 +87,9 @@ WHERE Product_SUB_Category = 'APPLIANCES'
 AND Region = 'ONTARIO'
 
 ```
+
+- Total Sales of Appliances in Ontario is 202,350
+
 
     4. Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
 
@@ -81,17 +102,22 @@ group by Customer_Name
 order by total_sales asc
 
 ```
+- The management can introduce new offers or improve existing ones, they can also up-sell and cross-sell by encouraging the bottom 10 customers to purchase more products and get complementary items.
+
 
     5. KMS incurred the most shipping cost using which shipping method?
 
 ```sql
 select top 1
 Ship_Mode,
-shipping_cost
+sum (shipping_cost) as total_shipping_cost
 from[dbo].[KMS Sql Case Study]
-order by Shipping_Cost
+group by Ship_Mode 
+order by total_shipping_cost desc
+
 
 ```
+- KMS incurred the most using Delivery Truck with shipping cost totalling 51971.940
 
 ### Case Scenario TWO
 
