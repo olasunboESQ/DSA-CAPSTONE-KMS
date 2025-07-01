@@ -181,26 +181,21 @@ order by Customer_Segment desc
   - SixtyTwo (62) customers from Consumer Segment returned Items
 Totalling 542 customers that returned items.
 
-        11. If the delivery truck is the most economical but the slowest shipping method and
-Express Air is the fastest but the most expensive one, do you think the company
-appropriately spent shipping costs based on the Order Priority? Explain your answer
 
-The Palmoria Group, a manufacturing company based in Nigeria, is embroiled in issues
-bordering on gender inequality in its 3 regions. Unfortunately, the media recently
-published the news with the headline “Palmoria, the Manufacturing Patriarchy”. This
-doesn’t look good for the owners of the business, based on their ambition to scale the
-business to other regions and even overseas. Cases like this can only spiral downwards,
-revealing other issues like the gender pay gap, amongst other possible issues.
-The CEO of Palmoria, Mr Ayodeji Chukwuma, is keen to address these issues before they
-get out of hand. The CHRO, Mr Yunus Shofoluwe, has been assigned the task to identify
-key areas within the business that could give rise to issues and address them immediately.
-Mr Shofoluwe decided to recruit you as an HR Analytics expert to analyse the company’s
-HR data and come up with recommendations for management’s attention. “Now, the
-future of gender equality in Palmoria lies in your hands” – the exact words of Mr
-Shofoluwe before he handed the data to you.
-CASE SCENARIO
-● Analyse the company data and generate insights that the Palmoria management
-team would need to address
+        11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one,
+            do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer.
 
-  
+```sql
+select ship_mode,
+ order_priority, 
+ count (*) as order_count,
+ ROUND(avg(shipping_cost),2) as avgshipcost
+ from[dbo].[KMS Sql Case Study]
+ group by ship_mode, Order_Priority
+ order by Order_Priority,avgshipcost asc
+
+```
+-  From the response from the queryabove, the company has a serious cost efficeincy issue as the delivery Truck which is the slowest and should be the most economical is extremely expensive with aveage cost of 44-47. 
+-  This result shows that Regular Air is the most cost effective while Express Air is still resonable. The Delivery Truck which should be the cheapest is now extremely expensive and its usage for Critical Order is counterintuitive. Also a significant number of Low priority orders used Express Air inflating the costs unnecessarily, while Critical orders used Delivery Truck, risking customer's dissatifaction.     
+
 
