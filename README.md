@@ -25,8 +25,7 @@ The first critical step is to create a database unto which i imported the Order 
 
 ## Analysis Tools
 
-- Microsoft Excel [Download Here](https://www.microsoft.com)
-- Structured Query Language
+- Structured Query Language. I am using this in the SQL Server Management [Download Here](https://www.microsoft.com)
 
 ### Case Scenario One
 
