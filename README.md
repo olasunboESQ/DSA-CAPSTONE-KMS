@@ -1,4 +1,4 @@
-[Q3.csv](https://github.com/user-attachments/files/21033395/Q3.csv)# DSA-CAPSTONE-KULTRA MEGA STORES INVENTORY ANALYSIS
+# DSA-CAPSTONE-KULTRA MEGA STORES INVENTORY ANALYSIS
 
 ### This is an analysis for a a Store's Inventory from the year 2009-2012 using Structured Query Language (SQL)
 
@@ -227,8 +227,19 @@ from[dbo].[KMS Sql Case Study]
 where status is not null
 
 ```
-  - [q10.csv](https://github.com/user-attachments/files/21032831/q10.csv)
-over 500 customers returned items
+  - [Muhammed MacIntyre,Small Business,3,"Eldon Base for stackable storage shelf, platinum"
+Claudia Miner,Small Business,933,"Wilson Jones 1"" Hanging DublLock® Ring Binders"
+Allen Rosenblatt,Small Business,998,"#10-4 1/8"" x 9 1/2"" Premium Diagonal Seam Envelopes"
+Grant Carroll,Small Business,2275,Col-Erase® Pencils with Erasers
+Brad Eason,Small Business,3232,XtraLife® ClearVue™ Slant-D® Ring Binders by Cardinal
+Nicole Hansen,Small Business,3524,Computer Printout Paper with Letter-Trim Perforations
+Nicole Hansen,Small Business,8419,Xerox 1936
+Nicole Hansen,Small Business,8419,Xerox 214
+Nicole Hansen,Small Business,8833,Carina Double Wide Media Storage Towers in Natural & Black
+Delfina Latchford,Small Business,15108,Xerox 1893
+ng q10.csv…]()
+
+- Over 500 customers returned items
 
 
         11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one,
@@ -261,7 +272,19 @@ Not Specified,Delivery Truck,215,43.6651625256206,1080840.25,1
 Not Specified,Express Air,180,8.16699995663431,194372.03,1
 Not Specified,Regular Air,1277,7.62261547660492,1257786.89,1
 
+- There is a significant inconstitencies in the alignment between priority order and shipping mode. The company did not appropriately spend shipping costs based on the order priority as some shippingmodes do not match urgency for some critical orders.
 
-## FINDINGS AND RECOMMENDATIONS
+
+## FINDINGS AND RECOMMENDATIONS.
+
+- Generally speaking the Kultra Mega Stores order data for 2009-2012 showed that some customers ordered more overtime while some did not.
+
+- Also some customer Segment thrived more than orders based on the product/services purchased and profit made.
+
+- The company can do more in the area of advertisment, complementary gifts or raffle draw promos to boost their sales overtime.
+
+- There is also need to align shipping mode with the order priority to improve the profit base margin. This will aslo curb unnecessary cost inflation of shipping cost.
+
+- Strategic improvement in shipping decision can result in cost saving and improved service reliability.
 
 
