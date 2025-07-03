@@ -1,6 +1,6 @@
-# DSA-CAPSTONE-KULTRA MEGA STORES INVENTORY ANALYSIS
+[Q2a.csv](https://github.com/user-attachments/files/21032067/Q2a.csv)[Q1.csv](https://github.com/user-attachments/files/21031855/Q1.csv)# DSA-CAPSTONE-KULTRA MEGA STORES INVENTORY ANALYSIS
 
-### This is an analysis for a a Store's Inventory from the year 2009-2012 using Structyred Query Language (SQL)
+### This is an analysis for a a Store's Inventory from the year 2009-2012 using Structured Query Language (SQL)
 
 As Business Intelligent Analyst employeed to suport the Abuja branch of the Store, the first step i took after being handed the 
 Excel Dataset containing the order data from the year 2009-2012 was to critically clean my data using Microsoft Excel.
@@ -8,8 +8,6 @@ Excel Dataset containing the order data from the year 2009-2012 was to criticall
 - [Project Overiew](#project-overview)
 
 - [Analysis Tools](#analysis-tools)
-
-- [OUTCOME OF Order Data USING MICROSOFT EXCEL](#outcome-of-order-data-using-microsoft-excel)
 
 - [OUTCOME OF ORDER_DATA USING Structured Query Language (SQL)](#outcome-of-order-data-using-structured-query-language-sql)
 
@@ -27,7 +25,9 @@ The first critical step is to create a database unto which i imported the Order 
 
 - Structured Query Language. I am using this in the SQL Server Management [Download Here](https://www.microsoft.com)
 
-### Case Scenario One
+## Outcome Of Order Data Using SQL
+
+- Case Scenario One
 
 I created a database called DSA_Project and i imported the excel order data into it as a table
 
@@ -42,7 +42,9 @@ ORDER BY TOTAL_SALES ASC
 
 ```
 
-- Office Spplies has the highest sales with total sales of 3,752,740
+- [Uploading Office Supplies,3752740
+Q1.csv…]()
+
          
     2. What are the Top 3 and Bottom 3 regions in terms of sales?
 
@@ -53,6 +55,14 @@ TOTAL_SALES FROM [dbo].[KMS Sql Case Study]
 GROUP BY REGION 
 ORDER BY TOTAL_SALES ASC
 
+```
+
+- [UploadinWest,3597550
+Ontario,3063221
+Prarie,2837301
+g Q2a.csv…]()
+
+
 SELECT TOP 3
 REGION, SUM (SALES) AS
 TOTAL_SALES FROM [dbo].[KMS Sql Case Study]
@@ -60,21 +70,11 @@ GROUP BY REGION
 ORDER BY TOTAL_SALES DESC
 
 ```
-- TOP 3 REGIONS
 
-      i. West with 3,597,550
-
-      ii. Ontario with 3,063,221
-
-      iii. Prarie with 2,837,301
-
-- BOTTOM 3 REGIONS
-
-       i. Nunavut with 116,374
-
-      ii. NorthWest Territories with 800,850
-
-      iii. Yukon with 975,865
+[Uploadin Nunavut,116374
+Northwest Territories,800850
+Yukon,975865
+g Q2.csv…]()
 
    
     3. What were the total sales of appliances in Ontario?
@@ -101,6 +101,7 @@ group by Customer_Name
 order by total_sales asc
 
 ```
+
 - The management can introduce new offers or improve existing ones, they can also up-sell and cross-sell by encouraging the bottom 10 customers to purchase more products and get complementary items.
 
 
