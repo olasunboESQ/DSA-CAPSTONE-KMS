@@ -1,4 +1,4 @@
-[Q2a.csv](https://github.com/user-attachments/files/21032067/Q2a.csv)[Q1.csv](https://github.com/user-attachments/files/21031855/Q1.csv)# DSA-CAPSTONE-KULTRA MEGA STORES INVENTORY ANALYSIS
+[q10.csv](https://github.com/user-attachments/files/21032756/q10.csv)[Q9.csv](https://github.com/user-attachments/files/21032633/Q9.csv)[Q6B.csv](https://github.com/user-attachments/files/21032570/Q6B.csv)[Q6.csv](https://github.com/user-attachments/files/21032534/Q6.csv)[Q6.csv](https://github.com/user-attachments/files/21032418/Q6.csv)[Q5.csv](https://github.com/user-attachments/files/21032334/Q5.csv)[Q3.csv](https://github.com/user-attachments/files/21032276/Q3.csv)[Q3.csv](https://github.com/user-attachments/files/21032153/Q3.csv)[Q4.csv](https://github.com/user-attachments/files/21032149/Q4.csv)# DSA-CAPSTONE-KULTRA MEGA STORES INVENTORY ANALYSIS
 
 ### This is an analysis for a a Store's Inventory from the year 2009-2012 using Structured Query Language (SQL)
 
@@ -42,7 +42,7 @@ ORDER BY TOTAL_SALES ASC
 
 ```
 
-- [Uploading Office Supplies,3752740
+- [Office Supplies,3752740
 Q1.csv…]()
 
          
@@ -57,12 +57,12 @@ ORDER BY TOTAL_SALES ASC
 
 ```
 
-- [UploadinWest,3597550
+- [West,3597550
 Ontario,3063221
 Prarie,2837301
 g Q2a.csv…]()
 
-
+```sql
 SELECT TOP 3
 REGION, SUM (SALES) AS
 TOTAL_SALES FROM [dbo].[KMS Sql Case Study]
@@ -71,7 +71,7 @@ ORDER BY TOTAL_SALES DESC
 
 ```
 
-[Uploadin Nunavut,116374
+- [Nunavut,116374
 Northwest Territories,800850
 Yukon,975865
 g Q2.csv…]()
@@ -86,6 +86,9 @@ WHERE Product_SUB_Category = 'APPLIANCES'
 AND Region = 'ONTARIO'
 
 ```
+
+- [202350
+g Q3.csv…]()
 
 - Total Sales of Appliances in Ontario is 202,350
 
@@ -102,6 +105,18 @@ order by total_sales asc
 
 ```
 
+- [Jeremy Farry,2,86
+Natalie DeCherney,1,126
+Nicole Fjeld,2,153
+Katrina Edelman,2,181
+Dorothy Dickinson,1,198
+Christine Kargatis,2,293
+Eric Murdock,4,344
+Chris McAfee,2,351
+Rick Huthwaite,2,415
+Mark Hamilton,1,451
+4.csv…]()
+
 - The management can introduce new offers or improve existing ones, they can also up-sell and cross-sell by encouraging the bottom 10 customers to purchase more products and get complementary items.
 
 
@@ -115,24 +130,18 @@ from[dbo].[KMS Sql Case Study]
 group by Ship_Mode 
 order by total_shipping_cost desc
 
-
 ```
+
+- [Delivery Truck,51971.9397373199
+ Q5.csv…]()
+
 - KMS incurred the most using Delivery Truck with shipping cost totalling 51971.940
+
 
 ### Case Scenario TWO
 
-        6. Who are the most valuable customers, and what products or services do they typically purchase?
+        6. Who are the most valuable customers, and what products or services do they typically purcha
 
-```sql
-
-select top 1
-customer_name, 
-sum (sales) as total_spent 
-from[dbo].[KMS Sql Case Study]
-group by Customer_Name 
-order by total_spent desc
-
-```
 ```sql
 select customer_name, product_name, Order_Quantity,
 sales
@@ -146,8 +155,21 @@ group by Customer_Name
 order by total_spent desc
 
 ```
-- The most valuable customer is EMILY PHAN as she spent a total of 117,124 and the item
-she purchased most is "O'Sullivan Elevations Bookcase, Cherry Finish" with a total order of Thirty (30)
+- [Emily Phan,"O'Sullivan Elevations Bookcase, Cherry Finish",30,4012
+Emily Phan,Bell Sonecor JB700 Caller ID,27,193
+Emily Phan,Harmony HEPA Quiet Air Purifiers,33,362
+Emily Phan,Fellowes Bankers Box™ Stor/Drawer® Steel Plus™,16,488
+Emily Phan,Polycom ViewStation™ ISDN Videoconferencing Unit,13,89061
+Emily Phan,TimeportP7382,40,6637
+Emily Phan,Boston 1730 StandUp Electric Pencil Sharpener,16,336
+Emily Phan,Heavy-Duty E-Z-D® Binders,11,127
+Emily Phan,Hewlett-Packard Deskjet 1220Cse Color Inkjet Printer,39,14591
+Emily Phan,Surelock™ Post Binders,44,1317
+ng Q6.csv…]()
+
+
+- [Emily Phan,117124 ng Q6B.csv…]()
+
 
    7. Which small business customer had the highest sales?
 
@@ -182,30 +204,30 @@ order by total_orders desc
 ```sql
 select top 1
 customer_name,
-count(order_id) as total_orders
+sum (profit)as total_profit
 from[dbo].[KMS Sql Case Study]
-where Customer_Segment ='corporate' and 
-Order_Date between '2009-01-01' and '2012-12-31'
+where Customer_Segment = 'consumer'
 group by Customer_Name 
-order by total_orders desc
+order by total_profit  desc
 
 ```
-- EMILY PHAN was the most profitable consumer customer with 3,401
+
+- [UploadingEmily Phan,34005.4392166138 Q9.csv…]()
+
 
        10. Which customer returned items, and what segment do they belong to?
 ```sql
 select distinct customer_name,
-customer_segment, order_id
-from[dbo].[KMS Sql Case Study]
-where status ='returned'
-order by Customer_Segment desc
+customer_segment
+from[dbo].[KMS Sql Case Study] 
+where status = 'returned'
+select top 10 *
+from[dbo].[KMS Sql Case Study] 
+where status is not null
 
 ```
-  - One Hundred and Eight (108) customers from Small Business returned items
-  - Ninety-Four (94) customers from Home Office returned items
-  - Two Hundred and Seventy-Eight (278) from corporate returned items
-  - SixtyTwo (62) customers from Consumer Segment returned Items
-Totalling 542 customers that returned items.
+  - [q10.csv](https://github.com/user-attachments/files/21032831/q10.csv)
+over 500 customers returned items
 
 
         11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one,
@@ -221,7 +243,22 @@ select ship_mode,
  order by Order_Priority,avgshipcost asc
 
 ```
--  From the response from the queryabove, the company has a serious cost efficeincy issue as the delivery Truck which is the slowest and should be the most economical is extremely expensive with aveage cost of 44-47. 
--  This result shows that Regular Air is the most cost effective while Express Air is still resonable. The Delivery Truck which should be the cheapest is now extremely expensive and its usage for Critical Order is counterintuitive. Also a significant number of Low priority orders used Express Air inflating the costs unnecessarily, while Critical orders used Delivery Truck, risking customer's dissatifaction.     
+-  [q11.csv](https://github.com/user-attachments/files/21033043/q11.csv)
+Critical,Delivery Truck,228,47.2974559131422,1218332.07,1
+Critical,Express Air,200,8.71049994021654,197990.83,1
+Critical,Regular Air,1180,7.27691522180024,1118846.23,1
+High,Delivery Truck,248,45.1890320047255,1338510.57,1
+High,Regular Air,1308,7.64909018334628,1306961.6,1
+High,Express Air,212,6.85627354287876,201587.18,1
+Low,Delivery Truck,250,44.5264397354126,1313679.83,3
+Low,Express Air,190,8.16647367257821,190534.53,4
+Low,Regular Air,1280,8.01845309105702,1360362.74,4
+Medium,Delivery Truck,205,46.154243780927,969386.41,1
+Medium,Express Air,201,8.12731339712048,244812.12,1
+Medium,Regular Air,1225,7.68875099240517,1260243.74,1
+Not Specified,Delivery Truck,215,43.6651625256206,1080840.25,1
+Not Specified,Express Air,180,8.16699995663431,194372.03,1
+Not Specified,Regular Air,1277,7.62261547660492,1257786.89,1
+
 
 
