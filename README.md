@@ -1,4 +1,4 @@
-[q10.csv](https://github.com/user-attachments/files/21032756/q10.csv)[Q9.csv](https://github.com/user-attachments/files/21032633/Q9.csv)[Q6B.csv](https://github.com/user-attachments/files/21032570/Q6B.csv)[Q6.csv](https://github.com/user-attachments/files/21032534/Q6.csv)[Q6.csv](https://github.com/user-attachments/files/21032418/Q6.csv)[Q5.csv](https://github.com/user-attachments/files/21032334/Q5.csv)[Q3.csv](https://github.com/user-attachments/files/21032276/Q3.csv)[Q3.csv](https://github.com/user-attachments/files/21032153/Q3.csv)[Q4.csv](https://github.com/user-attachments/files/21032149/Q4.csv)# DSA-CAPSTONE-KULTRA MEGA STORES INVENTORY ANALYSIS
+[Q3.csv](https://github.com/user-attachments/files/21033395/Q3.csv)# DSA-CAPSTONE-KULTRA MEGA STORES INVENTORY ANALYSIS
 
 ### This is an analysis for a a Store's Inventory from the year 2009-2012 using Structured Query Language (SQL)
 
@@ -25,7 +25,7 @@ The first critical step is to create a database unto which i imported the Order 
 
 - Structured Query Language. I am using this in the SQL Server Management [Download Here](https://www.microsoft.com)
 
-## Outcome Of Order Data Using SQL
+## Outcome Of Order Data Using Structured Query Language
 
 - Case Scenario One
 
@@ -46,7 +46,7 @@ ORDER BY TOTAL_SALES ASC
 Q1.csv…]()
 
          
-    2. What are the Top 3 and Bottom 3 regions in terms of sales?
+     2. What are the Top 3 and Bottom 3 regions in terms of sales?
 
 ```sql
 SELECT TOP 3
@@ -77,7 +77,7 @@ Yukon,975865
 g Q2.csv…]()
 
    
-    3. What were the total sales of appliances in Ontario?
+     3. What were the total sales of appliances in Ontario?
 
  ```sql
 SELECT SUM (SALES) AS TOTAL_APPLIANCE_SALES
@@ -90,10 +90,11 @@ AND Region = 'ONTARIO'
 - [202350
 g Q3.csv…]()
 
+
 - Total Sales of Appliances in Ontario is 202,350
 
 
-    4. Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
+      4. Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
 
  ```sql
 bottom 10 customers
@@ -120,7 +121,7 @@ Mark Hamilton,1,451
 - The management can introduce new offers or improve existing ones, they can also up-sell and cross-sell by encouraging the bottom 10 customers to purchase more products and get complementary items.
 
 
-    5. KMS incurred the most shipping cost using which shipping method?
+        5. KMS incurred the most shipping cost using which shipping method?
 
 ```sql
 select top 1
@@ -132,15 +133,14 @@ order by total_shipping_cost desc
 
 ```
 
-- [Delivery Truck,51971.9397373199
- Q5.csv…]()
+- [Delivery Truck,51971.9397373199 Q5.csv…]()
 
 - KMS incurred the most using Delivery Truck with shipping cost totalling 51971.940
 
 
 ### Case Scenario TWO
 
-        6. Who are the most valuable customers, and what products or services do they typically purcha
+        6. Who are the most valuable customers, and what products or services do they typically purchase?
 
 ```sql
 select customer_name, product_name, Order_Quantity,
@@ -183,7 +183,8 @@ group by Customer_Name
 order by highest_sales desc
 
 ```
-- DENNIS KANE is the small business customer with the highest sales with 75,966.
+- [Dennis Kane,75966 ng 7.csv…]()
+
   
       8. Which Corporate Customer placed the most number of orders in 2009 – 2012?
 
@@ -198,7 +199,7 @@ group by Customer_Name
 order by total_orders desc
 
 ```
-- ADAM HART is the corporate customer who placed 27 orders in 2009-2012
+- [Adam Hart,18 7.csv…]()
 
        9. Which consumer customer was the most profitable one?
 ```sql
@@ -212,7 +213,7 @@ order by total_profit  desc
 
 ```
 
-- [UploadingEmily Phan,34005.4392166138 Q9.csv…]()
+- [Emily Phan,34005.4392166138 Q9.csv…]()
 
 
        10. Which customer returned items, and what segment do they belong to?
@@ -260,5 +261,7 @@ Not Specified,Delivery Truck,215,43.6651625256206,1080840.25,1
 Not Specified,Express Air,180,8.16699995663431,194372.03,1
 Not Specified,Regular Air,1277,7.62261547660492,1257786.89,1
 
+
+## FINDINGS AND RECOMMENDATIONS
 
 
