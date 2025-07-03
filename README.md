@@ -255,22 +255,9 @@ select ship_mode,
  order by Order_Priority,avgshipcost asc
 
 ```
--  [q11.csv](https://github.com/user-attachments/files/21033043/q11.csv)
-Critical,Delivery Truck,228,47.2974559131422,1218332.07,1
-Critical,Express Air,200,8.71049994021654,197990.83,1
-Critical,Regular Air,1180,7.27691522180024,1118846.23,1
-High,Delivery Truck,248,45.1890320047255,1338510.57,1
-High,Regular Air,1308,7.64909018334628,1306961.6,1
-High,Express Air,212,6.85627354287876,201587.18,1
-Low,Delivery Truck,250,44.5264397354126,1313679.83,3
-Low,Express Air,190,8.16647367257821,190534.53,4
-Low,Regular Air,1280,8.01845309105702,1360362.74,4
-Medium,Delivery Truck,205,46.154243780927,969386.41,1
-Medium,Express Air,201,8.12731339712048,244812.12,1
-Medium,Regular Air,1225,7.68875099240517,1260243.74,1
-Not Specified,Delivery Truck,215,43.6651625256206,1080840.25,1
-Not Specified,Express Air,180,8.16699995663431,194372.03,1
-Not Specified,Regular Air,1277,7.62261547660492,1257786.89,1
+- [q11.csv](https://github.com/user-attachments/files/21033786/q11.csv)
+
+
 
 - There is a significant inconstitencies in the alignment between priority order and shipping mode. The company did not appropriately spend shipping costs based on the order priority as some shippingmodes do not match urgency for some critical orders.
 
