@@ -1,4 +1,4 @@
-# DSA-CAPSTONE-KULTRA MEGA STORES INVENTORY ANALYSIS
+# 🏬 DSA-CAPSTONE-KULTRA MEGA STORES INVENTORY ANALYSIS
 
 ### This is an analysis for a a Store's Inventory from the year 2009-2012 using Structured Query Language (SQL)
 
