@@ -1,6 +1,6 @@
 # 🏬 DSA-CAPSTONE-KULTRA MEGA STORES INVENTORY ANALYSIS
 
-### This is an analysis for a a Store's Inventory from the year 2009-2012 using Structured Query Language (SQL)
+### 📌 This is an analysis for a a Store's Inventory from the year 2009-2012 using Structured Query Language (SQL)
 
 As Business Intelligent Analyst employeed to suport the Abuja branch of the Store, the first step i took after being handed the 
 Excel Dataset containing the order data from the year 2009-2012 was to critically clean my data using Microsoft Excel.
@@ -21,7 +21,7 @@ I will use Structured Query Language to explore this Order Data in order to solv
 The first critical step is to create a database unto which i imported the Order data of the store. 
 
 
- ## Analysis Tools
+ ## 💻 Analysis Tools
 
 📁 - Structured Query Language. I am using this in the SQL Server Management [Download Here](https://www.microsoft.com)
 
@@ -261,7 +261,7 @@ select ship_mode,
 - There is a significant inconstitencies in the alignment between priority order and shipping mode. The company did not appropriately spend shipping costs based on the order priority as some shippingmodes do not match urgency for some critical orders.
 
 
-## FINDINGS AND RECOMMENDATIONS.
+## ✅ FINDINGS AND RECOMMENDATIONS.
 
 - Generally speaking the Kultra Mega Stores order data for 2009-2012 showed that some customers ordered more overtime while some did not.
 
