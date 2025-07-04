@@ -21,17 +21,17 @@ I will use Structured Query Language to explore this Order Data in order to solv
 The first critical step is to create a database unto which i imported the Order data of the store. 
 
 
-## Analysis Tools
+ ## Analysis Tools
 
-- Structured Query Language. I am using this in the SQL Server Management [Download Here](https://www.microsoft.com)
+📁 - Structured Query Language. I am using this in the SQL Server Management [Download Here](https://www.microsoft.com)
 
 ## Outcome Of Order Data Using Structured Query Language
 
-- Case Scenario One
+  👋 - Case Scenario One
 
 I created a database called DSA_Project and i imported the excel order data into it as a table
 
-    1. Which product category had the highest sales?
+ #### 1. Which product category had the highest sales?
 
  ```sql
 SELECT TOP 1 PRODUCT_CATEGORY, 
@@ -46,7 +46,7 @@ ORDER BY TOTAL_SALES ASC
 Q1.csv…]()
 
          
-     2. What are the Top 3 and Bottom 3 regions in terms of sales?
+#### 2. What are the Top 3 and Bottom 3 regions in terms of sales?
 
 ```sql
 SELECT TOP 3
@@ -77,7 +77,7 @@ Yukon,975865
 g Q2.csv…]()
 
    
-     3. What were the total sales of appliances in Ontario?
+#### 3. What were the total sales of appliances in Ontario?
 
  ```sql
 SELECT SUM (SALES) AS TOTAL_APPLIANCE_SALES
@@ -94,7 +94,7 @@ g Q3.csv…]()
 - Total Sales of Appliances in Ontario is 202,350
 
 
-      4. Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
+#### 4. Advise the management of KMS on what to do to increase the revenue from the bottom 10 customers
 
  ```sql
 bottom 10 customers
@@ -121,7 +121,7 @@ Mark Hamilton,1,451
 - The management can introduce new offers or improve existing ones, they can also up-sell and cross-sell by encouraging the bottom 10 customers to purchase more products and get complementary items.
 
 
-        5. KMS incurred the most shipping cost using which shipping method?
+#### 5. KMS incurred the most shipping cost using which shipping method?
 
 ```sql
 select top 1
@@ -171,7 +171,7 @@ ng Q6.csv…]()
 - [Emily Phan,117124 ng Q6B.csv…]()
 
 
-   7. Which small business customer had the highest sales?
+ #### 7. Which small business customer had the highest sales?
 
 ```sql
 select top 1
@@ -185,8 +185,8 @@ order by highest_sales desc
 ```
 - [Dennis Kane,75966 ng 7.csv…]()
 
-  
-      8. Which Corporate Customer placed the most number of orders in 2009 – 2012?
+
+  #### 8. Which Corporate Customer placed the most number of orders in 2009 – 2012?
 
 ```sql
 select top 1
@@ -201,7 +201,7 @@ order by total_orders desc
 ```
 - [Adam Hart,18 7.csv…]()
 
-       9. Which consumer customer was the most profitable one?
+#### 9. Which consumer customer was the most profitable one?
 ```sql
 select top 1
 customer_name,
@@ -216,7 +216,7 @@ order by total_profit  desc
 - [Emily Phan,34005.4392166138 Q9.csv…]()
 
 
-       10. Which customer returned items, and what segment do they belong to?
+#### 10. Which customer returned items, and what segment do they belong to?
 ```sql
 select distinct customer_name,
 customer_segment
@@ -242,8 +242,8 @@ ng q10.csv…]()
 - Over 500 customers returned items
 
 
-        11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one,
-            do you think the company appropriately spent shipping costs based on the Order Priority? Explain your answer.
+#### 11. If the delivery truck is the most economical but the slowest shipping method and Express Air is the fastest but the most expensive one,do you think
+####     the company appropriately spent shipping costs based on the Order Priority? Explain your answer.
 
 ```sql
 select ship_mode,
@@ -256,7 +256,6 @@ select ship_mode,
 
 ```
 - [q11.csv](https://github.com/user-attachments/files/21033786/q11.csv)
-
 
 
 - There is a significant inconstitencies in the alignment between priority order and shipping mode. The company did not appropriately spend shipping costs based on the order priority as some shippingmodes do not match urgency for some critical orders.
